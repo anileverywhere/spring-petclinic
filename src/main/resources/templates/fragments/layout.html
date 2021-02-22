@@ -12,12 +12,25 @@
 </script>
 <script defer crossorigin="anonymous" src="https://eum.instana.io/eum.min.js"></script>
 <script type = "text/javascript">
- ineum('reportError', new Error('Something failed!!'), {
-  componentStack: 'homepage',
+ ineum('reportError', new Error('Page error!'), {
+  componentStack: 'pets',
   meta: {
     widgetType: 'page'
+  }   
+})
+  
+  ineum('reportEvent', 'full example', {
+  timestamp: Date.now(),
+  duration: 42,
+  backendTraceId: '31ab91fc1092',
+  error: new Error('whooops – sorry!'),
+  componentStack: 'a component stack',
+  meta: {
+    state: 'running'
   }
-});
+})
+  
+  ;
   
 </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
