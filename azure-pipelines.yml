@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'Default'
+  name: Default  # Refers to your self-hosted agent pool
 
 steps:
 - task: Maven@3
